@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>去重（去除重复的数字或字母）</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+    var arr=[1,2,3,1,4,5,3,3,3,3]
+         for(var i=0,hash=[];i<arr.length;i++){  
+             if(hash.indexOf(arr[i])==-1){         //indexOf:有很大的缺陷，字母是没有办法进行去重的，
+                 hash.push(arr[i])
+             }
+         }
+    alert(hash);
+	
+	
+	 /*var arr=[a,bb,abb,bba,aa,bb,aab,bba,d,c3]
+         for(var i=0,hash=[];i<arr.length;i++){        //这种根本不能实现，一直出现错误；   a is undefined
+             if(hash.indexOf(arr[i])==-1){
+                 hash.push(arr[i])
+             }
+         }
+    alert(hash)   
+	*/
+  </script>
+
+</body>
+</html>
